@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F88D36A121CD709200A51431 /* StoryboardExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = F88D369F21CD709200A51431 /* StoryboardExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88D36AA21CD715E00A51431 /* StoryboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D36A921CD715E00A51431 /* StoryboardController.swift */; };
+		F88D36AC21CD71F800A51431 /* UIStoryboard+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D36AB21CD71F800A51431 /* UIStoryboard+UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F88D369C21CD709200A51431 /* StoryboardExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StoryboardExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88D369F21CD709200A51431 /* StoryboardExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardExtensions.h; sourceTree = "<group>"; };
 		F88D36A021CD709200A51431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88D36A921CD715E00A51431 /* StoryboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardController.swift; sourceTree = "<group>"; };
+		F88D36AB21CD71F800A51431 /* UIStoryboard+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+UIViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +50,28 @@
 		F88D369E21CD709200A51431 /* StoryboardExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				F88D36A821CD70C300A51431 /* Extensions */,
+				F88D36A721CD70AA00A51431 /* Protocols */,
 				F88D369F21CD709200A51431 /* StoryboardExtensions.h */,
 				F88D36A021CD709200A51431 /* Info.plist */,
 			);
 			path = StoryboardExtensions;
+			sourceTree = "<group>";
+		};
+		F88D36A721CD70AA00A51431 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F88D36A921CD715E00A51431 /* StoryboardController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F88D36A821CD70C300A51431 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F88D36AB21CD71F800A51431 /* UIStoryboard+UIViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +117,7 @@
 				TargetAttributes = {
 					F88D369B21CD709200A51431 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88D36AA21CD715E00A51431 /* StoryboardController.swift in Sources */,
+				F88D36AC21CD71F800A51431 /* UIStoryboard+UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +278,7 @@
 		F88D36A521CD709200A51431 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vit.corp.StoryboardExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +301,7 @@
 		F88D36A621CD709200A51431 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
