@@ -8,11 +8,11 @@
 
 import UIKit
 
-extension UIStoryboard {
+public extension UIStoryboard {
     
-    static func instantiateStoryboardController<T: StoryboardController & UIViewController>(type: T, bundle: Bundle = Bundle.main) -> UIViewController {
+    static func instantiateStoryboardController<T: StoryboardController & UIViewController>(type: T.Type, bundle: Bundle = Bundle.main) -> T {
         let storybboard = UIStoryboard(name: T.storybaordName, bundle: bundle)
-        return storybboard.instantiateViewController(withIdentifier: T.storyboardId)
+        return storybboard.instantiateViewController(withIdentifier: T.storyboardId) as! T
     }
     
 }

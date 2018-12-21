@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol StoryboardController {
+public protocol StoryboardController {
     
     static var storybaordName: String { get }
     static var storyboardId: String { get }
